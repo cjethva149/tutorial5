@@ -4,13 +4,13 @@ var supply = require('./Models/model')
 
 //to fetch data
 router.get('/stock',async(req,res)=>{
-    const istock = await supply.find()
+    const istock = await stock.find()
     res.send(istock)
 })
 
 //to add the movies
-router.post("/stock",async(req,res)=>{
-    const istock = new supply(req.body)
+router.post('/stock',async(req,res)=>{
+    const istock = new stock(req.body)
 
     await istock.save((err,msg)=>{
         if(err){
@@ -52,7 +52,7 @@ router.patch('/stock/:id',async (req,res)=>{
 //delete api
 
 router.delete("/stock/:name",async(req,res)=>{
-    await supply.deleteOne({name:req.params.name},(err,msg)=>{
+    await stock.deleteOne({name:req.params.name},(err,msg)=>{
         if(err){
             res.status(500).json({
                 error:err

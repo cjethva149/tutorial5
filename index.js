@@ -3,7 +3,7 @@ var express = require('express')
 var route = require('./routes')
 var bodyParser =require('body-parser')
 
-mongoose.connect('mongodb+srv://payal:payal@cluster0.oy7g0.mongodb.net/supply?retryWrites=true&w=majority').then(()=>{
+mongoose.connect('mongodb+srv://ctesting:bO2abElG5F05nWJZ@cluster0.zsl6n.mongodb.net/stock?retryWrites=true&w=majority').then(()=>{
     console.log('DB Connected....')
 
     app = express();
@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://payal:payal@cluster0.oy7g0.mongodb.net/supply?re
         res.sendFile('index.html',{root:__dirname})
     })
 
-    app.listen((process.env.PORT||3000),()=>{
+    app.listen((process.env.PORT||2000),()=>{
         console.log('server started')
     })
 }).catch((e)=>{

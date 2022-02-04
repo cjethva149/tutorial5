@@ -5,4 +5,4 @@ var supply = mongoose.Schema({
     password:Number
 })
 
-module.exports = mongoose.model("supply",supply)
+module.exports = mongoose.model("stock",supply)
