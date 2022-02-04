@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://ctesting:bO2abElG5F05nWJZ@cluster0.zsl6n.mongodb
         res.sendFile('index.html',{root:__dirname})
     })
 
-    app.listen((process.env.PORT||2000),()=>{
+    app.listen((process.env.PORT||3000),()=>{
         console.log('server started')
     })
 }).catch((e)=>{
